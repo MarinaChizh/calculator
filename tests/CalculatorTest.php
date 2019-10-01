@@ -29,6 +29,35 @@ class CalculatorTest extends TestCase
             'wrong pow'
         );
 
+        $this->assertEquals(
+            1,
+            $this->calc->minus(4, 3),
+            'wrong minus'
+        );
+
+        $this->assertEquals(
+            9,
+            $this->calc->multiply(3, 3),
+            'wrong multiply'
+        );
+
+        $this->assertEquals(
+            2,
+            $this->calc->divide(6, 3),
+            'wrong divide'
+        );
+
+        $this->assertEquals(
+            1,
+            $this->calc->procent(11, 2),
+            'wrong procent'
+        );
+
+        $this->assertIsFloat(
+            $this->calc->div(11, 3),
+            'wrong'
+        );
+
     }
 
     protected function tearDown(): void
