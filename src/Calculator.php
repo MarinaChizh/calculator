@@ -41,6 +41,30 @@ class Calculator
         return $a % $b;
     }
 
-    
+    public function equal($a, $b): bool
+    {
+        return ($a == $b) ? true : false;
+    }
 
+    public function more($a, $b): bool
+    {
+        return ($a > $b) ? true : false;
+    }
+
+    public function less($a, $b): bool
+    {
+        return ($a < $b) ? true : false;
+    }
+
+    public function sort(array $array): array
+    {
+        sort($array);
+        return $array;
+    }
+
+    public function reverse(array $array): array
+    {
+        $reverse = array_reverse($array);
+        return $reverse;
+    }
 }

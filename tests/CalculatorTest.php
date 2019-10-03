@@ -54,8 +54,35 @@ class CalculatorTest extends TestCase
         );
 
         $this->assertIsFloat(
-            $this->calc->div(11, 3),
-            'wrong'
+            $this->calc->divide(27, 3),
+            'wrong divide'
+        );
+
+        $this->assertTrue(
+            $this->calc->equal(3, 3),
+            'wrong equal'
+        );
+
+        $this->assertTrue(
+            $this->calc->more(5, 3),
+            'wrong more'
+        );
+
+        $this->assertTrue(
+            $this->calc->less(1, 3),
+            'wrong less'
+        );
+
+        $this->assertEquals(
+            [1, 5, 8],
+            $this->calc->sort([5,8,1]),
+            'wrong sort'
+        );
+
+        $this->assertEquals(
+            [1, 8, 5],
+            $this->calc->reverse([5,8,1]),
+            'wrong reverse'
         );
 
     }
